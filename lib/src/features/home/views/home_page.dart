@@ -128,6 +128,21 @@ class CharacterCard extends StatelessWidget {
               fontSize: 16,
               fontWeight: FontWeight.w300,
             ),
+            SizedBox(height: 20.0),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                final snackBar = SnackBar(
+                    content: KronaText('SYSTEM FAIL, NOT ENOUGH TIME'));
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+              style: ElevatedButton.styleFrom(primary: AppColors.red),
+              child: JuraText(
+                'UNLOCK',
+                color: Colors.black,
+                fontSize: 16,
+              ),
+            ),
           ],
         ),
       ),
