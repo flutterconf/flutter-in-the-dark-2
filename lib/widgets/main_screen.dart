@@ -15,12 +15,32 @@ class MainScreen extends StatelessWidget {
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
           backgroundColor: bgColor,
+          title: Padding(
+            padding: const EdgeInsets.all(28.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Text(
+                  ' MACHINE UNLOCKED',
+                  style: TextStyle(
+                    color: secondaryColor,
+                  ),
+                ),
+                IconButton(
+                  icon: Image.asset(
+                    "assets/images/unlocked.png",
+                  ),
+                  onPressed: null,
+                ),
+              ],
+            ),
+          ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
         floatingActionButton: new FloatingActionButton(
           backgroundColor: secondaryColor,
           child: IconButton(
-            icon: new Image.asset(
+            icon: Image.asset(
               "assets/images/logo.png",
             ),
             onPressed: null,
